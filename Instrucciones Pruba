@@ -12,10 +12,12 @@
 		DB_DATABASE=galeria
 		DB_USERNAME=root
 		DB_PASSWORD=XXXXX
-	6. npm install
-	7. php artisan storage:link
-	8. php artisan serve 
-	9. Realizar Registro Para subir Imagenes
+	6. php artisan migrate
+	7. php artisan db:seed
+	8. npm install
+	9. php artisan storage:link
+	10. php artisan serve 
+	11. Realizar Registro de usuario Para subir Imagenes
 
 2: Back
 
