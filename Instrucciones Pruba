@@ -1,0 +1,36 @@
+
+1: Front
+
+	1. composer install
+	2. Crear el archivo .env
+	3. php artisan key:generate
+	4. Crear base de datos llamada "galeria"
+	5. Actualizar archivo .env con datos correspondientes
+		DB_CONNECTION=mysql
+		DB_HOST=127.0.0.1
+		DB_PORT=3306
+		DB_DATABASE=galeria
+		DB_USERNAME=root
+		DB_PASSWORD=XXXXX
+	6. npm install
+	7. php artisan storage:link
+	8. php artisan serve 
+	9. Realizar Registro Para subir Imagenes
+
+2: Back
+
+Se generaron los siguientes end point los cuales se puden probar con ayuda de alguna una plataforma de API tal como postman.
+
+--------+-----------+----------------------------------------+------------------------+------------------------------------------------------------------------+--------------+
+| Domain | Method    | URI                                    | Name                   | Action                                                                 | Middleware   |
++--------+-----------+----------------------------------------+------------------------+------------------------------------------------------------------------+--------------+
+|        | POST      | api/mi_galeria                         | mi_galeria.store       | App\Http\Controllers\MiGaleriaController@store                         | api          |
+|        | GET|HEAD  | api/categorias                         | categorias             | App\Http\Controllers\APIController@categorias                          | api          |
+|        | GET|HEAD  | api/categorias/{categoria}             | categoria              | App\Http\Controllers\APIController@categoria                           | api          |
+|        | GET|HEAD  | api/mi_galeria                         | mi_galeria.index       | App\Http\Controllers\MiGaleriaController@index                         | api          |
+|        | GET|HEAD  | api/mi_galeria/{mi_galerium}           | mi_galeria.show        | App\Http\Controllers\MiGaleriaController@show                          | api          |
+|        | PUT|PATCH | api/mi_galeria/{mi_galerium}           | mi_galeria.update      | App\Http\Controllers\MiGaleriaController@update                        | api          |
+|        | DELETE    | api/mi_galeria/{mi_galerium}           | mi_galeria.destroy     | App\Http\Controllers\MiGaleriaController@destroy                       | api          |
+
+
+
